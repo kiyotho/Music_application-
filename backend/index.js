@@ -82,7 +82,6 @@ app.get('/search', async (req, res) => {
       '--no-warnings',
       '--ignore-errors',
       '--skip-download',
-      '--flat-playlist',
       '--dump-json',
       '--no-playlist',
       query,
