@@ -1,5 +1,5 @@
 const API_BASE =
-  import.meta.env.VITE_API_URL?.toString() || 'http://localhost:5174'
+  import.meta.env.VITE_API_URL?.toString() || 'https://music-application-prod.up.railway.app'
 
 export type YouTubeSearchResult = {
   title: string
