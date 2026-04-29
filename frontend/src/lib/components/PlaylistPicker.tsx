@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { usePlaylistStore } from '../store/playlistStore'
+import { usePlaylistStore } from '../../store/playlistStore'
 
 export function PlaylistPicker(props: {
   onPick: (playlistId: string) => void
@@ -54,4 +54,3 @@ export function PlaylistPicker(props: {
     </div>
   )
 }
-

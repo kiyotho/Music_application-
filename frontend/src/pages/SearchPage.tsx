@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Search as SearchIcon } from 'lucide-react'
-import { PlaylistPicker } from '../components/PlaylistPicker'
+import { PlaylistPicker } from '../lib/components/PlaylistPicker'
 import { searchYouTube, type YouTubeSearchResult } from '../lib/api'
 import { saveTrackToRegistry } from '../lib/trackRegistry'
 import { usePlaylistStore } from '../store/playlistStore'
@@ -129,4 +129,3 @@ export function SearchPage() {
     </div>
   )
 }
-

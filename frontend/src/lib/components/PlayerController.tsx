@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { useShallow } from 'zustand/react/shallow'
-import { getStreamUrl } from '../lib/api'
-import { getLocalTrackBlob } from '../lib/localLibrary'
-import { usePlayerStore, getCurrentTrack } from '../store/playerStore'
-import { useSettingsStore } from '../store/settingsStore'
-import { useHistoryStore } from '../store/historyStore'
+import { getStreamUrl } from '../api'
+import { getLocalTrackBlob } from '../localLibrary'
+import { usePlayerStore, getCurrentTrack } from '../../store/playerStore'
+import { useSettingsStore } from '../../store/settingsStore'
+import { useHistoryStore } from '../../store/historyStore'
 
 function formatArtistChannelFallback(title: string) {
   return title
@@ -158,4 +158,3 @@ export function PlayerController() {
 
   return null
 }
-

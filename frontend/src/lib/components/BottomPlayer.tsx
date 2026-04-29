@@ -1,8 +1,8 @@
 import { Pause, Play, SkipBack, SkipForward, Volume2 } from 'lucide-react'
 import { useMemo } from 'react'
 import { useShallow } from 'zustand/react/shallow'
-import { usePlayerStore, getCurrentTrack } from '../store/playerStore'
-import { useSettingsStore } from '../store/settingsStore'
+import { usePlayerStore, getCurrentTrack } from '../../store/playerStore'
+import { useSettingsStore } from '../../store/settingsStore'
 
 function formatTime(sec: number) {
   if (!Number.isFinite(sec) || sec <= 0) return '0:00'
@@ -120,4 +120,3 @@ export function BottomPlayer() {
     </footer>
   )
 }
-

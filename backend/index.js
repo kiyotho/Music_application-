@@ -67,6 +67,14 @@ app.get('/health', (_req, res) => {
   res.json({ ok: true })
 })
 
+app.get('/', (_req, res) => {
+  res.json({
+    ok: true,
+    service: 'music-application-backend',
+    endpoints: ['/health', '/search?q=query', '/stream?videoId=id&quality=low|high'],
+  })
+})
+
 app.get('/search', async (req, res) => {
   const q = String(req.query.q || '').trim()
   if (!q) return res.status(400).json({ error: 'Missing q' })
@@ -151,8 +159,14 @@ app.get('/stream', async (req, res) => {
   }
 })
 
+app.use((req, res) => {
+  res.status(404).json({
+    error: 'Not found',
+    path: req.path,
+  })
+})
+
 app.listen(PORT, '0.0.0.0', () => {
   // eslint-disable-next-line no-console
   console.log(`Backend listening on http://0.0.0.0:${PORT}`)
 })
-

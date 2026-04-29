@@ -1,5 +1,12 @@
-const API_BASE =
-  import.meta.env.VITE_API_URL?.toString() || 'https://music-application-prod.up.railway.app'
+const API_BASE = import.meta.env.VITE_API_URL?.toString().trim() || ''
+
+function buildApiUrl(path: string) {
+  const base = API_BASE || (import.meta.env.DEV ? 'http://localhost:5174' : '')
+  if (!base) {
+    throw new Error('Missing VITE_API_URL. Set it to your Railway backend URL in Vercel.')
+  }
+  return new URL(path, base)
+}
 
 export type YouTubeSearchResult = {
   title: string
@@ -10,7 +17,7 @@ export type YouTubeSearchResult = {
 }
 
 export async function searchYouTube(q: string): Promise<YouTubeSearchResult[]> {
-  const url = new URL('/search', API_BASE)
+  const url = buildApiUrl('/search')
   url.searchParams.set('q', q)
   const res = await fetch(url)
   if (!res.ok) throw new Error(`Search failed: ${res.status}`)
@@ -21,11 +28,10 @@ export async function getStreamUrl(params: {
   videoId: string
   quality: 'low' | 'high'
 }): Promise<{ url: string }> {
-  const url = new URL('/stream', API_BASE)
+  const url = buildApiUrl('/stream')
   url.searchParams.set('videoId', params.videoId)
   url.searchParams.set('quality', params.quality)
   const res = await fetch(url)
   if (!res.ok) throw new Error(`Stream failed: ${res.status}`)
   return (await res.json()) as { url: string }
 }
-
