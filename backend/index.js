@@ -3,7 +3,7 @@ const cors = require('cors')
 const { spawn } = require('node:child_process')
 
 const PORT = Number(process.env.PORT || 5174)
-const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 'http://localhost:5173'
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || '*'
 
 const SEARCH_TTL_MS = 10 * 60 * 1000
 const SEARCH_CACHE_MAX = 100
