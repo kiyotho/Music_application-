@@ -1,0 +1,13 @@
+Uncaught (in promise) DOMException: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+    PlayerController PlayerController.tsx:129
+    React 44
+    setState vanilla.mjs:9
+    setState vanilla.mjs:9
+    togglePlay playerStore.ts:72
+    React 13
+    <anonymous> main.tsx:9
+PlayerController.tsx:129:31
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://rr3---sn-gwpa-5bgee.googlevideo.com/videoplayback?expire=1777483855&ei=7-vxaeb4GcLLssUPj5-csQ0&ip=2405%3A201%3A6823%3A48fa%3Aabbd%3A7432%3A8009%3A7ecd&id=o-AKwZpSzRD8dRoeMeWgAQup0YppU6v7-DcAx7xJBI5si8&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=595&met=1777462255%2C&mh=G6&mm=31%2C29&mn=sn-gwpa-5bgee%2Csn-gwpa-qxae7&ms=au%2Crdu&mv=m&mvi=3&pl=51&rms=au%2Cau&gcr=in&initcwndbps=827500&bui=AbKmrwqLAm1INOqYPe98iSh-rueN8JekQckzQ3PeYgIu1-FyswZjdYUK2ROfJJzHc2QBzyHAzjEvHbeU&spc=96Xrv7JpT1KqAoZNx2lKZE_uN5cpczGF-QG67tWMfdiI&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=3984819&dur=246.177&lmt=1705799169523703&mt=1777461896&fvip=1&keepalive=yes&fexp=51565116%2C51565681&c=ANDROID_VR&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cgcr%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AHEqNM4wRQIgPRhIp8rRoC7HnQz7fFGQy5m8oI0wczhQZR8hfvRs9NYCIQCOPTHKpXJYPkXTL5yBzbYL40XbN4ojJdDR5vgOy52x9g%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIhAJi_hB2vVcQYvhziYD_Sxy8GU9Uucktf33PNOw2z8oCrAiAxhiTUuYqKmI2VwuPAt1vn1EoRhCZKwd44_5b3rmlDkg%3D%3D. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 206.
+Invalid URI. Load of media resource  failed. search
+
+​
