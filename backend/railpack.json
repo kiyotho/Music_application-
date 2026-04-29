@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "packages": {
+    "python": "3"
+  },
+  "cmds": {
+    "install-ytdlp": {
+      "cmd": "pip install yt-dlp",
+      "runAfter": ["packages:python"]
+    }
+  }
+}
