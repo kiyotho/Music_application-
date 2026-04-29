@@ -6,8 +6,8 @@
 - **Audio**: `yt-dlp` (must be installed on the machine running the backend)
 
 ### Prereqs
-- Node.js (you have it)
-- Python (you have it)
+- Node.js
+- Python
 - `yt-dlp`:
 
 ```bash
